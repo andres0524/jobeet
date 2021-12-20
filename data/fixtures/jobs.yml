@@ -27,4 +27,4 @@ JobeetJob:
     token:        job_<?php echo $i."\n" ?>
     email:        job@example.com
 
-  <?php endfor ?>
+<?php endfor ?>
