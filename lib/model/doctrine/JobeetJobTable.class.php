@@ -26,6 +26,14 @@ class JobeetJobTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('JobeetJob');
     }
+    public function retrieveBackendJobList(Doctrine_Query $q)
+    {
+        $rootAlias = $q->getRootAlias();
+
+        $q->leftJoin($rootAlias . '.JobeetCategory c');
+
+        return $q;
+    }
     public function retrieveActiveJob(Doctrine_Query $q)
     {
         return $this->addActiveJobsQuery($q)->fetchOne();
