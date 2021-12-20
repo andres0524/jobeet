@@ -25,11 +25,11 @@ test:
 all:
   .settings:
     # Form security secret (CSRF protection)
-    csrf_secret:            df5eb25bbcd032bbbeed83c4635b7e574dddc9af
+    csrf_secret: Unique$ecret
 
     # Output escaping settings
-    escaping_strategy:      true
-    escaping_method:        ESC_SPECIALCHARS
+    escaping_strategy: true
+    escaping_method:   ESC_SPECIALCHARS
 
     # Enable the database manager
     use_database:           true
