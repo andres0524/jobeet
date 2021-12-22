@@ -4235,3 +4235,66 @@ Dec 20 17:42:41 symfony [info] {sfWebDebugLogger} Partial "job/_generated_token"
 Dec 20 17:42:41 symfony [info] {sfWebDebugLogger} Partial "job/_form_actions" 0.98 ms (1)
 Dec 20 17:42:41 symfony [info] {sfWebDebugLogger} Partial "job/_form_footer" 0.46 ms (1)
 Dec 20 17:42:41 symfony [info] {sfWebResponse} Send content (158837 o)
+Dec 22 07:34:45 symfony [info] {sfPatternRouting} Match route "jobeet_job" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 07:34:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 07:34:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 22 07:34:46 symfony [info] {sfBasicSecurityFilter} Action "job/index" requires authentication, forwarding to "default/login"
+Dec 22 07:34:46 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 07:34:46 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 22 07:34:46 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 07:34:46 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Dec 22 07:34:46 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib/controller/default/templates/loginSuccess.php"
+Dec 22 07:34:46 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:34:46 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:34:46 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 07:34:46 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 07:34:46 symfony [info] {sfWebDebugLogger} Configuration 373.15 ms (15)
+Dec 22 07:34:46 symfony [info] {sfWebDebugLogger} Factories 136.27 ms (1)
+Dec 22 07:34:46 symfony [info] {sfWebDebugLogger} Action "default/login" 0.17 ms (1)
+Dec 22 07:34:46 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 140.89 ms (1)
+Dec 22 07:34:46 symfony [info] {sfWebResponse} Send content (33483 o)
+Dec 22 07:35:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /default/login with parameters array (  'module' => 'default',  'action' => 'login',)
+Dec 22 07:35:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 07:35:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 22 07:35:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 07:35:11 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Dec 22 07:35:11 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib/controller/default/templates/loginSuccess.php"
+Dec 22 07:35:11 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:35:11 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:35:11 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 07:35:11 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 07:35:11 symfony [info] {sfWebDebugLogger} Configuration 2.17 ms (9)
+Dec 22 07:35:11 symfony [info] {sfWebDebugLogger} Factories 28.37 ms (1)
+Dec 22 07:35:11 symfony [info] {sfWebDebugLogger} Action "default/login" 0.10 ms (1)
+Dec 22 07:35:11 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 13.67 ms (1)
+Dec 22 07:35:11 symfony [info] {sfWebResponse} Send content (32106 o)
+Dec 22 07:37:23 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /default/login with parameters array (  'module' => 'default',  'action' => 'login',)
+Dec 22 07:37:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 07:37:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 22 07:37:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 07:37:23 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Dec 22 07:37:23 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib/controller/default/templates/loginSuccess.php"
+Dec 22 07:37:23 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:37:23 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:37:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 07:37:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 07:37:23 symfony [info] {sfWebDebugLogger} Configuration 2.58 ms (9)
+Dec 22 07:37:23 symfony [info] {sfWebDebugLogger} Factories 38.70 ms (1)
+Dec 22 07:37:23 symfony [info] {sfWebDebugLogger} Action "default/login" 0.10 ms (1)
+Dec 22 07:37:23 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 18.50 ms (1)
+Dec 22 07:37:23 symfony [info] {sfWebResponse} Send content (32137 o)
+Dec 22 07:37:25 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /default/login with parameters array (  'module' => 'default',  'action' => 'login',)
+Dec 22 07:37:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 07:37:25 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Dec 22 07:37:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 07:37:25 symfony [info] {defaultActions} Call "defaultActions->executeLogin()"
+Dec 22 07:37:25 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib/controller/default/templates/loginSuccess.php"
+Dec 22 07:37:25 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:37:25 symfony [info] {sfPHPView} Render "G:\development\jobeet\lib\vendor\symfony\lib\controller\default\templates/defaultLayout.php"
+Dec 22 07:37:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 07:37:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 07:37:25 symfony [info] {sfWebDebugLogger} Configuration 1.68 ms (9)
+Dec 22 07:37:25 symfony [info] {sfWebDebugLogger} Factories 27.22 ms (1)
+Dec 22 07:37:25 symfony [info] {sfWebDebugLogger} Action "default/login" 0.05 ms (1)
+Dec 22 07:37:25 symfony [info] {sfWebDebugLogger} View "Success" for "default/login" 10.82 ms (1)
+Dec 22 07:37:25 symfony [info] {sfWebResponse} Send content (32116 o)
