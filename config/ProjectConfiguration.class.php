@@ -19,12 +19,13 @@ class ProjectConfiguration extends sfProjectConfiguration
         Zend_Loader_Autoloader::getInstance();
         self::$zendLoaded = true;
     }
-  public function setup()
-  {
-      $this->enablePlugins(array(
-          'sfDoctrinePlugin',
-          'sfDoctrineGuardPlugin',
-          'sfFormExtraPlugin'
-      ));
-  }
+    public function setup()
+    {
+        $this->enablePlugins(array(
+            'sfDoctrinePlugin',
+            'sfDoctrineGuardPlugin',
+            'sfFormExtraPlugin',
+            'sfJobeetPlugin'
+        ));
+    }
 }
