@@ -2,11 +2,46 @@
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 affiliate:
-  class:   sfDoctrineRouteCollection
+  class: sfDoctrineRouteCollection
   options:
-    model: JobeetAffiliate
-    actions: [new, create]
+    model:          JobeetAffiliate
+    actions:        [new, create]
     object_actions: { wait: get }
+    prefix_path:    /:sf_culture/affiliate
+
+category:
+  url:     /:sf_culture/category/:slug.:sf_format
+  class:   sfDoctrineRoute
+  param:   { module: category, action: show, sf_format: html }
+  options: { model: JobeetCategory, type: object }
+  requirements:
+    sf_format: (?:html|atom)
+
+job_search:
+  url:   /:sf_culture/search
+  param: { module: job, action: search }
+
+job:
+  class: sfDoctrineRouteCollection
+  options:
+    model:          JobeetJob
+    column:         token
+    object_actions: { publish: put, extend: put }
+    prefix_path:    /:sf_culture/job
+  requirements:
+    token: \w+
+
+job_show_user:
+  url:     /:sf_culture/job/:company_slug/:location_slug/:id/:position_slug
+  class:   sfDoctrineRoute
+  options:
+    model: JobeetJob
+    type: object
+    method_for_query: retrieveActiveJob
+  param:   { module: job, action: show }
+  requirements:
+    id:        \d+
+    sf_method: get
 
 api_jobs:
   url:     /api/:token/jobs.:sf_format
@@ -16,38 +51,11 @@ api_jobs:
   requirements:
     sf_format: (?:xml|json|yaml)
 
-category:
-  url:     /category/:slug.:sf_format
-  class:   sfDoctrineRoute
-  param:   { module: category, action: show, sf_format: html }
-  options: { model: JobeetCategory, type: object }
+localized_homepage:
+  url: /:sf_culture/
+  param: { module: job, action: index }
   requirements:
-    sf_format: (?:html|atom)
-
-job:
-  class:   sfDoctrineRouteCollection
-  options:
-    model:          JobeetJob
-    column:         token
-    object_actions: { publish: PUT, extend: PUT }
-  requirements:
-    token: \w+
-
-job_show_user:
-  url:     /job/:company_slug/:location_slug/:id/:position_slug
-  class:   sfDoctrineRoute
-  options:
-    model: JobeetJob
-    type:  object
-    method_for_query: retrieveActiveJob
-  param:   { module: job, action: show }
-  requirements:
-    id: \d+
-    sf_method: [GET]
-
-job_search:
-  url:   /search
-  param: { module: job, action: search }
+    sf_culture: (?:fr|en)
 
 # default rules
 homepage:

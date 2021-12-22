@@ -24,6 +24,7 @@ test:
 
 all:
   .settings:
+    default_culture: it_IT
     # Form security secret (CSRF protection)
     csrf_secret: Unique$ecret
 
