@@ -1,14 +1,14 @@
 JobeetCategory:
   actAs:
     Timestampable: ~
-    Sluggable:
+    I18n:
       fields: [name]
+      actAs:
+        Sluggable: { fields: [name], uniqueBy: [lang, name] }
   columns:
-    name:
-      type: string(255)
-      notnull:  true
+    name: { type: string(255), notnull: true
 
-JobeetJob:
+            JobeetJob:
   actAs: { Timestampable: ~ }
   columns:
     category_id:  { type: integer, notnull: true }

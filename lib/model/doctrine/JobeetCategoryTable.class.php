@@ -24,4 +24,13 @@ class JobeetCategoryTable extends Doctrine_Table
 
         return $q->execute();
     }
+
+    public function findOneBySlug($slug)
+    {
+        $q = $this->createQuery('a')
+            ->leftJoin('a.Translation t')
+            ->andWhere('t.lang = ?', 'en')
+            ->andWhere('t.slug = ?', $slug);
+        return $q->fetchOne();
+    }
 }
