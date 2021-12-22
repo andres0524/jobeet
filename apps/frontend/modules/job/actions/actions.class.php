@@ -18,6 +18,8 @@ class jobActions extends sfActions
     public function executeShow(sfWebRequest $request)
     {
         $this->job = $this->getRoute()->getObject();
+
+        $this->getUser()->addJobToHistory($this->job);
     }
 
     public function executeNew(sfWebRequest $request)
@@ -99,6 +101,6 @@ class jobActions extends sfActions
 
         $this->getUser()->setFlash('notice', sprintf('Your job validity has been extended until %s.', $job->getDateTimeObject('expires_at')->format('m/d/Y')));
 
-        $this->redirect('job_show_user', $job);
+        $this->redirect($this->generateUrl('job_show_user', $job));
     }
 }
