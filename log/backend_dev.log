@@ -5689,3 +5689,794 @@ Dec 22 08:58:24 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actio
 Dec 22 08:58:24 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.53 ms (1)
 Dec 22 08:58:24 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.35 ms (1)
 Dec 22 08:58:24 symfony [info] {sfWebResponse} Send content (179297 o)
+Dec 22 11:35:43 symfony [info] {sfPatternRouting} Match route "jobeet_job" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:35:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:35:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:35:43 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 11:35:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:35:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Dec 22 11:35:43 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/indexSuccess.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_assets.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_flashes.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_header.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_th_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_th_tabular.php"
+Dec 22 11:35:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_pagination.php"
+Dec 22 11:35:43 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_batch_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_actions.php"
+Dec 22 11:35:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_footer.php"
+Dec 22 11:35:43 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:35:43 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:35:43 symfony [err] {Doctrine_Table_Exception} Unknown method JobeetAffiliateTable::countToBeActivated
+Dec 22 11:35:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 500 Internal Server Error"
+Dec 22 11:35:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Configuration 45.25 ms (12)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Factories 85.46 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Action "job/index" 40.33 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.87 ms (4)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 94.59 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.39 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.36 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.31 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 17.81 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 13.41 ms (8)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list" 36.71 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.93 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.52 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.81 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 4.00 ms (10)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 11.18 ms (10)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 3.42 ms (10)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 10.65 ms (10)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.50 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.61 ms (1)
+Dec 22 11:35:43 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.30 ms (1)
+Dec 22 11:36:15 symfony [info] {sfPatternRouting} Match route "jobeet_job" (/job.:sf_format) for /job with parameters array (  'module' => 'job',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:36:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:36:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:36:15 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 11:36:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:36:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM (SELECT j.id FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id GROUP BY j.id) dctrn_count_query - ()
+Dec 22 11:36:15 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/indexSuccess.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_assets.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_flashes.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_header.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_filters_field.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_th_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_th_tabular.php"
+Dec 22 11:36:15 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_pagination.php"
+Dec 22 11:36:15 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j2.id AS j2__id, j2.name AS j2__name, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at, j2.slug AS j2__slug FROM jobeet_job j LEFT JOIN jobeet_category j2 ON j.category_id = j2.id ORDER BY j.expires_at desc LIMIT 10 - ()
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_stacked.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_field_boolean.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_td_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_batch_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_actions.php"
+Dec 22 11:36:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoJob/templates/_list_footer.php"
+Dec 22 11:36:15 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:36:15 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:36:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:36:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:36:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Configuration 1.59 ms (11)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Factories 22.14 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Action "job/index" 34.72 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 5.09 ms (5)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 74.94 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_assets" 0.40 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_flashes" 0.43 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_header" 0.40 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_filters" 17.67 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_filters_field" 13.00 ms (8)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list" 35.58 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_stacked" 1.67 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_th_tabular" 1.25 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_pagination" 0.72 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_batch_actions" 3.64 ms (10)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_stacked" 11.13 ms (10)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_field_boolean" 3.86 ms (10)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_td_actions" 10.48 ms (10)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_batch_actions" 0.49 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_actions" 0.58 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebDebugLogger} Partial "job/_list_footer" 0.29 ms (1)
+Dec 22 11:36:15 symfony [info] {sfWebResponse} Send content (180771 o)
+Dec 22 11:36:18 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:36:18 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:36:18 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:36:18 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:36:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:36:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j - ()
+Dec 22 11:36:18 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_th_tabular.php"
+Dec 22 11:36:18 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:18 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j LIMIT 20 - ()
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:36:18 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:36:18 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:36:18 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:36:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:36:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:36:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Configuration 98.92 ms (12)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Factories 22.22 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 25.41 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.60 ms (5)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 61.59 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.78 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.44 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.33 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 18.56 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 14.60 ms (7)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 14.60 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_th_tabular" 1.49 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_batch_actions" 0.77 ms (2)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_tabular" 7.73 ms (2)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_field_boolean" 0.68 ms (2)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_actions" 1.54 ms (2)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.47 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.40 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.30 ms (1)
+Dec 22 11:36:18 symfony [info] {sfWebResponse} Send content (112726 o)
+Dec 22 11:36:50 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:36:50 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:36:50 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:36:50 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:36:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:36:50 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j - ()
+Dec 22 11:36:50 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_th_tabular.php"
+Dec 22 11:36:50 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:36:50 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j LIMIT 20 - ()
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:36:50 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:36:50 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:36:50 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:36:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:36:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:36:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Configuration 92.78 ms (12)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Factories 26.45 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 24.01 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.70 ms (4)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 35.40 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.42 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.35 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.30 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 5.34 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.38 ms (3)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 11.92 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_th_tabular" 0.92 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_batch_actions" 0.77 ms (2)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_tabular" 2.85 ms (2)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_field_boolean" 0.67 ms (2)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_actions" 1.39 ms (2)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.48 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.30 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.29 ms (1)
+Dec 22 11:36:50 symfony [info] {sfWebResponse} Send content (83049 o)
+Dec 22 11:38:10 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:38:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:38:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:38:10 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:38:10 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:38:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:38:10 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_th_tabular.php"
+Dec 22 11:38:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:38:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j WHERE (j.is_active = ?) LIMIT 20 - (0)
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:38:10 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:38:10 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:38:10 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:38:10 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:38:10 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:38:10 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Configuration 1.98 ms (11)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Factories 25.33 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 33.45 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.78 ms (4)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 25.46 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.21 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.21 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.18 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 5.24 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.58 ms (3)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 9.96 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_th_tabular" 0.94 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_batch_actions" 0.39 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_tabular" 1.86 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_field_boolean" 0.32 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_actions" 0.70 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.49 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.29 ms (1)
+Dec 22 11:38:10 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.28 ms (1)
+Dec 22 11:38:11 symfony [info] {sfWebResponse} Send content (77864 o)
+Dec 22 11:39:27 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:39:27 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:39:27 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:39:27 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:39:27 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:39:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:39:27 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_th_tabular.php"
+Dec 22 11:39:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j WHERE (j.is_active = ?) LIMIT 20 - (0)
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:39:27 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:39:27 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:39:27 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:39:27 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:39:27 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:39:27 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Configuration 1.93 ms (11)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Factories 26.74 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 38.91 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.66 ms (4)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 30.32 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.36 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.33 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.30 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 5.29 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.33 ms (3)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 11.23 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_th_tabular" 1.09 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_batch_actions" 0.47 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_tabular" 1.93 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_field_boolean" 0.33 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_actions" 0.77 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.49 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.31 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.28 ms (1)
+Dec 22 11:39:27 symfony [info] {sfWebResponse} Send content (77865 o)
+Dec 22 11:39:32 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate_collection" (/affiliate/:action/action.:sf_format) for /affiliate/batch/action with parameters array (  'module' => 'affiliate',  'action' => 'batch',  'sf_format' => 'html',)
+Dec 22 11:39:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:39:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:39:32 symfony [info] {affiliateActions} Call "affiliateActions->executeBatch()"
+Dec 22 11:39:32 symfony [info] {sfFrontWebController} Redirect to "http://jobeet.local/backend_dev.php/affiliate"
+Dec 22 11:39:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 22 11:39:32 symfony [info] {sfWebResponse} Send header "Location: http://jobeet.local/backend_dev.php/affiliate"
+Dec 22 11:39:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Configuration 1.52 ms (10)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Factories 25.24 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Action "affiliate/batch" 4.04 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebResponse} Send content (116 o)
+Dec 22 11:39:32 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:39:32 symfony [info] {myUser} Flag old flash messages ("error")
+Dec 22 11:39:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:39:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:39:32 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:39:32 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:39:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:39:32 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_th_tabular.php"
+Dec 22 11:39:32 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j WHERE (j.is_active = ?) LIMIT 20 - (0)
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:39:32 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:39:32 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:39:32 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:39:32 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:39:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:39:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Configuration 1.50 ms (11)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Factories 24.13 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 33.48 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.63 ms (4)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 25.73 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.21 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.22 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.18 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 5.17 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.43 ms (3)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 9.92 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_th_tabular" 0.96 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_batch_actions" 0.39 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_tabular" 1.87 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_field_boolean" 0.31 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_actions" 0.71 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.49 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.34 ms (1)
+Dec 22 11:39:32 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.29 ms (1)
+Dec 22 11:39:33 symfony [info] {sfWebResponse} Send content (78490 o)
+Dec 22 11:39:33 symfony [info] {myUser} Remove old flash messages ("error")
+Dec 22 11:39:39 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:39:39 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:39:39 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:39:39 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:39:39 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:39:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:39:39 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_th_tabular.php"
+Dec 22 11:39:39 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:39:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j WHERE (j.is_active = ?) LIMIT 20 - (0)
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:39:39 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:39:39 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:39:39 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:39:39 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:39:39 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:39:39 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Configuration 1.53 ms (11)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Factories 25.22 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 33.63 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.33 ms (4)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 29.00 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.22 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.21 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.17 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 6.02 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.90 ms (3)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 10.09 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_th_tabular" 0.93 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_batch_actions" 0.41 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_tabular" 1.94 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_field_boolean" 0.32 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_actions" 0.71 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.50 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.29 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.29 ms (1)
+Dec 22 11:39:39 symfony [info] {sfWebResponse} Send content (77839 o)
+Dec 22 11:41:17 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate_object" (/affiliate/:id/:action.:sf_format) for /affiliate/4/ListActivate with parameters array (  'module' => 'affiliate',  'action' => 'ListActivate',  'sf_format' => 'html',  'id' => '4',)
+Dec 22 11:41:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:41:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:41:17 symfony [info] {affiliateActions} Call "affiliateActions->executeListActivate()"
+Dec 22 11:41:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:41:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j WHERE (j.id = ?) - (4)
+Dec 22 11:41:17 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE jobeet_affiliate SET is_active = ?, updated_at = ? WHERE id = ? - (1, 2021-12-22 11:41:17, 4)
+Dec 22 11:41:17 symfony [info] {sfFrontWebController} Redirect to "http://jobeet.local/backend_dev.php/affiliate"
+Dec 22 11:41:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 22 11:41:17 symfony [info] {sfWebResponse} Send header "Location: http://jobeet.local/backend_dev.php/affiliate"
+Dec 22 11:41:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Configuration 1.57 ms (10)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Factories 25.21 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Action "affiliate/ListActivate" 44.63 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.37 ms (3)
+Dec 22 11:41:17 symfony [info] {sfWebResponse} Send content (116 o)
+Dec 22 11:41:17 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:41:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:41:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:41:17 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:41:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:41:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:41:17 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:41:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:41:17 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:41:17 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:41:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:41:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:41:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Configuration 1.50 ms (11)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Factories 24.78 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 33.40 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.24 ms (3)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 16.54 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.21 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.21 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.28 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 5.26 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.46 ms (3)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 0.52 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.48 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.29 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.28 ms (1)
+Dec 22 11:41:17 symfony [info] {sfWebResponse} Send content (65155 o)
+Dec 22 11:41:20 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:41:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:41:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:41:20 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:41:20 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:41:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:41:20 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:41:20 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:41:20 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:41:20 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:41:20 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:41:20 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:41:20 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Configuration 1.65 ms (11)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Factories 24.91 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 34.22 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.31 ms (3)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 16.49 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.27 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.22 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.17 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 5.09 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.35 ms (3)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 0.55 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.48 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.29 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.28 ms (1)
+Dec 22 11:41:20 symfony [info] {sfWebResponse} Send content (65155 o)
+Dec 22 11:48:43 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:48:43 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:48:43 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:48:43 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:48:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:48:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:48:43 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:48:43 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:48:43 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:48:43 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:48:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:48:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:48:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Configuration 1.99 ms (11)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Factories 33.36 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 46.39 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.22 ms (3)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 27.20 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.37 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.35 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.30 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 6.40 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.87 ms (3)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 0.50 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.54 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.30 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.29 ms (1)
+Dec 22 11:48:43 symfony [info] {sfWebResponse} Send content (65187 o)
+Dec 22 11:49:22 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate_collection" (/affiliate/:action/action.:sf_format) for /affiliate/filter/action with parameters array (  'module' => 'affiliate',  'action' => 'filter',  'sf_format' => 'html',)
+Dec 22 11:49:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:49:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:49:22 symfony [info] {affiliateActions} Call "affiliateActions->executeFilter()"
+Dec 22 11:49:22 symfony [info] {sfFrontWebController} Redirect to "http://jobeet.local/backend_dev.php/affiliate"
+Dec 22 11:49:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 22 11:49:22 symfony [info] {sfWebResponse} Send header "Location: http://jobeet.local/backend_dev.php/affiliate"
+Dec 22 11:49:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Configuration 1.49 ms (10)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Factories 26.64 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Action "affiliate/filter" 13.59 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebResponse} Send content (116 o)
+Dec 22 11:49:22 symfony [info] {sfPatternRouting} Match route "jobeet_affiliate" (/affiliate.:sf_format) for /affiliate with parameters array (  'module' => 'affiliate',  'action' => 'index',  'sf_format' => 'html',)
+Dec 22 11:49:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 11:49:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 11:49:22 symfony [info] {affiliateActions} Call "affiliateActions->executeIndex()"
+Dec 22 11:49:22 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 11:49:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j - ()
+Dec 22 11:49:22 symfony [info] {sfPHPView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/indexSuccess.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_assets.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_flashes.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_header.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_filters_field.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_th_tabular.php"
+Dec 22 11:49:22 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {main} Set slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {main} Get slot "sf_admin.current_header"
+Dec 22 11:49:22 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.url AS j__url, j.email AS j__email, j.token AS j__token, j.is_active AS j__is_active, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_affiliate j LIMIT 20 - ()
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_batch_actions.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_tabular.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_field_boolean.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_td_actions.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_batch_actions.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_actions.php"
+Dec 22 11:49:22 symfony [info] {sfPartialView} Render "G:\development\jobeet\cache\backend\dev\modules/autoAffiliate/templates/_list_footer.php"
+Dec 22 11:49:22 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:49:22 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\backend\templates/layout.php"
+Dec 22 11:49:22 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_affiliate j WHERE j.is_active = ? - (0)
+Dec 22 11:49:22 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 11:49:22 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Configuration 1.88 ms (11)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Factories 24.56 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Action "affiliate/index" 38.13 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.15 ms (4)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/index" 41.53 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_assets" 0.38 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_flashes" 0.34 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_header" 0.51 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters" 6.07 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_filters_field" 2.97 ms (3)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list" 12.72 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_th_tabular" 1.09 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_batch_actions" 0.79 ms (2)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_tabular" 2.86 ms (2)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_field_boolean" 0.73 ms (2)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_td_actions" 1.48 ms (2)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_batch_actions" 0.50 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_actions" 0.30 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebDebugLogger} Partial "affiliate/_list_footer" 0.29 ms (1)
+Dec 22 11:49:22 symfony [info] {sfWebResponse} Send content (83519 o)
