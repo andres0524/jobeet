@@ -91,6 +91,15 @@
                     <a href="<?php echo url_for('affiliate_new') ?>">Become an affiliate</a>
                 </li
             </ul>
+            <?php $form = new sfFormLanguage(
+                $sf_user,
+                array('languages' => array('en', 'fr'))
+            )
+            ?>
+            <form action="<?php echo url_for('change_language') ?>">
+                <?php echo $form ?><input type="submit" value="ok" />
+            </form>
+            <?php include_component('language', 'language') ?>
         </div>
     </div>
 </div>
