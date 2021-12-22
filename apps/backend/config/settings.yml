@@ -24,8 +24,8 @@ test:
 
 all:
   .actions:
-    login_module: default
-    login_action: login
+    login_module:    sfGuardAuth
+    login_action:    signin
   .settings:
     enabled_modules: [default, sfGuardAuth, sfGuardUser]
     # Form security secret (CSRF protection)
