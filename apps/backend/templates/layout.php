@@ -39,9 +39,9 @@
     </div>
 
     <div id="footer">
-        <img src="/legacy/images/jobeet-mini.png" />
+        <img src="/images/jobeet-mini.png" />
         powered by <a href="/">
-            <img src="/legacy/images/symfony.gif" alt="symfony framework" /></a>
+            <img src="/images/symfony.gif" alt="symfony framework" /></a>
     </div>
 </div>
 </body>
