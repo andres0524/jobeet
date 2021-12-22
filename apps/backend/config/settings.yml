@@ -27,6 +27,7 @@ all:
     login_module: default
     login_action: login
   .settings:
+    enabled_modules: [default, sfGuardAuth, sfGuardUser]
     # Form security secret (CSRF protection)
     csrf_secret:            38d2efc24470df0ae6770982384f0b4408272468
 
