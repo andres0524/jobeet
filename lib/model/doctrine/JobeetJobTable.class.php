@@ -109,4 +109,28 @@ class JobeetJobTable extends Doctrine_Table
 
         return $q->execute();
     }
+
+    public function getForLuceneQuery($query)
+    {
+        $hits = self::getLuceneIndex()->find($query);
+
+        $pks = array();
+        foreach ($hits as $hit)
+        {
+            $pks[] = $hit->pk;
+        }
+
+        if (empty($pks))
+        {
+            return array();
+        }
+
+        $q = $this->createQuery('j')
+            ->whereIn('j.id', $pks)
+            ->limit(20);
+
+        $q = $this->addActiveJobsQuery($q);
+
+        return $q->execute();
+    }
 }
