@@ -8298,3 +8298,227 @@ Dec 22 15:19:06 symfony [info] {sfWebDebugLogger} Partial "job/_list" 1.05 ms (1
 Dec 22 15:19:06 symfony [info] {sfWebDebugLogger} Component "language/language" 6.60 ms (1)
 Dec 22 15:19:06 symfony [info] {sfWebDebugLogger} Partial "language/_language" 2.73 ms (1)
 Dec 22 15:19:06 symfony [info] {sfWebResponse} Send content (52943 o)
+Dec 22 15:25:15 symfony [info] {sfPatternRouting} Match route "localized_homepage" (/:sf_culture/) for /en/ with parameters array (  'module' => 'job',  'action' => 'index',  'sf_culture' => 'en',)
+Dec 22 15:25:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:15 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 15:25:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2021-12-22 15:25:15)
+Dec 22 15:25:15 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/indexSuccess.php"
+Dec 22 15:25:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.is_activated = ?) LIMIT 2 - (13, 1)
+Dec 22 15:25:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/_list.php"
+Dec 22 15:25:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.is_activated = ? - (13, 1)
+Dec 22 15:25:15 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:15 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:15 symfony [info] {main} Get slot "title"
+Dec 22 15:25:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:15 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:15 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:15 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:15 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} Configuration 2.58 ms (11)
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} Factories 32.23 ms (1)
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} Action "job/index" 35.06 ms (1)
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.28 ms (5)
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 33.73 ms (1)
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} Partial "job/_list" 1.11 ms (1)
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} Component "language/language" 9.42 ms (1)
+Dec 22 15:25:15 symfony [info] {sfWebDebugLogger} Partial "language/_language" 2.20 ms (1)
+Dec 22 15:25:15 symfony [info] {sfWebResponse} Send content (53009 o)
+Dec 22 15:25:17 symfony [info] {sfPatternRouting} Match route "localized_homepage" (/:sf_culture/) for /en/ with parameters array (  'module' => 'job',  'action' => 'index',  'sf_culture' => 'en',)
+Dec 22 15:25:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:17 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 15:25:17 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2021-12-22 15:25:17)
+Dec 22 15:25:17 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/indexSuccess.php"
+Dec 22 15:25:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.is_activated = ?) LIMIT 2 - (13, 1)
+Dec 22 15:25:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/_list.php"
+Dec 22 15:25:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.is_activated = ? - (13, 1)
+Dec 22 15:25:17 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:17 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:17 symfony [info] {main} Get slot "title"
+Dec 22 15:25:17 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:17 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:17 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:17 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:17 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} Configuration 2.33 ms (11)
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} Factories 24.80 ms (1)
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} Action "job/index" 35.19 ms (1)
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.11 ms (5)
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 32.61 ms (1)
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} Partial "job/_list" 1.03 ms (1)
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} Component "language/language" 8.51 ms (1)
+Dec 22 15:25:17 symfony [info] {sfWebDebugLogger} Partial "language/_language" 2.13 ms (1)
+Dec 22 15:25:17 symfony [info] {sfWebResponse} Send content (52977 o)
+Dec 22 15:25:19 symfony [info] {sfPatternRouting} Match route "localized_homepage" (/:sf_culture/) for /en/ with parameters array (  'module' => 'job',  'action' => 'index',  'sf_culture' => 'en',)
+Dec 22 15:25:19 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:19 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:19 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 15:25:19 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2021-12-22 15:25:19)
+Dec 22 15:25:19 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/indexSuccess.php"
+Dec 22 15:25:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.is_activated = ?) LIMIT 2 - (13, 1)
+Dec 22 15:25:19 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/_list.php"
+Dec 22 15:25:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.is_activated = ? - (13, 1)
+Dec 22 15:25:19 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:19 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:19 symfony [info] {main} Get slot "title"
+Dec 22 15:25:19 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:19 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:19 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:19 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:19 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} Configuration 2.44 ms (11)
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} Factories 24.73 ms (1)
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} Action "job/index" 34.19 ms (1)
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.29 ms (5)
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 33.16 ms (1)
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} Partial "job/_list" 1.04 ms (1)
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} Component "language/language" 8.52 ms (1)
+Dec 22 15:25:19 symfony [info] {sfWebDebugLogger} Partial "language/_language" 2.26 ms (1)
+Dec 22 15:25:19 symfony [info] {sfWebResponse} Send content (52977 o)
+Dec 22 15:25:23 symfony [info] {sfPatternRouting} Match route "affiliate_new" (/:sf_culture/affiliate/new.:sf_format) for /en/affiliate/new with parameters array (  'module' => 'affiliate',  'action' => 'new',  'sf_format' => 'html',  'sf_culture' => 'en',)
+Dec 22 15:25:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:23 symfony [info] {affiliateActions} Call "affiliateActions->executeNew()"
+Dec 22 15:25:23 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/affiliate/templates/newSuccess.php"
+Dec 22 15:25:23 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/affiliate/templates/_form.php"
+Dec 22 15:25:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:23 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Dec 22 15:25:23 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:23 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:23 symfony [info] {main} Get slot "title"
+Dec 22 15:25:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:23 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:23 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} Configuration 3.05 ms (11)
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} Factories 25.53 ms (1)
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} Action "affiliate/new" 27.90 ms (1)
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/new" 40.01 ms (1)
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} Partial "affiliate/_form" 16.05 ms (1)
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.93 ms (3)
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} Component "language/language" 4.50 ms (1)
+Dec 22 15:25:23 symfony [info] {sfWebDebugLogger} Partial "language/_language" 1.01 ms (1)
+Dec 22 15:25:23 symfony [info] {sfWebResponse} Send content (49155 o)
+Dec 22 15:25:25 symfony [info] {sfPatternRouting} Match route "localized_homepage" (/:sf_culture/) for /en/ with parameters array (  'module' => 'job',  'action' => 'index',  'sf_culture' => 'en',)
+Dec 22 15:25:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:25 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 15:25:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2021-12-22 15:25:25)
+Dec 22 15:25:25 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/indexSuccess.php"
+Dec 22 15:25:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.is_activated = ?) LIMIT 2 - (13, 1)
+Dec 22 15:25:25 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/_list.php"
+Dec 22 15:25:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.is_activated = ? - (13, 1)
+Dec 22 15:25:25 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:25 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:25 symfony [info] {main} Get slot "title"
+Dec 22 15:25:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:25 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:25 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} Configuration 3.28 ms (11)
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} Factories 24.58 ms (1)
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} Action "job/index" 34.72 ms (1)
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.48 ms (5)
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 33.88 ms (1)
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} Partial "job/_list" 1.21 ms (1)
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} Component "language/language" 9.20 ms (1)
+Dec 22 15:25:25 symfony [info] {sfWebDebugLogger} Partial "language/_language" 2.22 ms (1)
+Dec 22 15:25:25 symfony [info] {sfWebResponse} Send content (52977 o)
+Dec 22 15:25:35 symfony [info] {sfPatternRouting} Match route "affiliate_new" (/:sf_culture/affiliate/new.:sf_format) for /en/affiliate/new with parameters array (  'module' => 'affiliate',  'action' => 'new',  'sf_format' => 'html',  'sf_culture' => 'en',)
+Dec 22 15:25:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:35 symfony [info] {affiliateActions} Call "affiliateActions->executeNew()"
+Dec 22 15:25:35 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/affiliate/templates/newSuccess.php"
+Dec 22 15:25:35 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/affiliate/templates/_form.php"
+Dec 22 15:25:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:35 symfony [info] {Doctrine_Connection_Mysql} query : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug FROM jobeet_category j - ()
+Dec 22 15:25:35 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:35 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:35 symfony [info] {main} Get slot "title"
+Dec 22 15:25:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:35 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:35 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:35 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:35 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} Configuration 2.40 ms (11)
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} Factories 24.51 ms (1)
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} Action "affiliate/new" 27.57 ms (1)
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} View "Success" for "affiliate/new" 41.11 ms (1)
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} Partial "affiliate/_form" 16.88 ms (1)
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} Database (Doctrine) 1.12 ms (3)
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} Component "language/language" 5.23 ms (1)
+Dec 22 15:25:35 symfony [info] {sfWebDebugLogger} Partial "language/_language" 1.07 ms (1)
+Dec 22 15:25:35 symfony [info] {sfWebResponse} Send content (49155 o)
+Dec 22 15:25:36 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Dec 22 15:25:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:36 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 15:25:36 symfony [info] {sfFrontWebController} Redirect to "http://jobeet.local/frontend_dev.php/en/"
+Dec 22 15:25:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Dec 22 15:25:36 symfony [info] {sfWebResponse} Send header "Location: http://jobeet.local/frontend_dev.php/en/"
+Dec 22 15:25:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:36 symfony [info] {sfWebDebugLogger} Configuration 1.81 ms (8)
+Dec 22 15:25:36 symfony [info] {sfWebDebugLogger} Factories 25.04 ms (1)
+Dec 22 15:25:36 symfony [info] {sfWebDebugLogger} Action "job/index" 0.29 ms (1)
+Dec 22 15:25:36 symfony [info] {sfWebResponse} Send content (111 o)
+Dec 22 15:25:37 symfony [info] {sfPatternRouting} Match route "localized_homepage" (/:sf_culture/) for /en/ with parameters array (  'module' => 'job',  'action' => 'index',  'sf_culture' => 'en',)
+Dec 22 15:25:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:37 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:37 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 15:25:37 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2021-12-22 15:25:37)
+Dec 22 15:25:37 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/indexSuccess.php"
+Dec 22 15:25:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.is_activated = ?) LIMIT 2 - (13, 1)
+Dec 22 15:25:37 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/_list.php"
+Dec 22 15:25:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.is_activated = ? - (13, 1)
+Dec 22 15:25:37 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:37 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:37 symfony [info] {main} Get slot "title"
+Dec 22 15:25:37 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:37 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:37 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:37 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:37 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} Configuration 2.33 ms (11)
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} Factories 24.45 ms (1)
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} Action "job/index" 34.94 ms (1)
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} Database (Doctrine) 3.03 ms (5)
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 33.13 ms (1)
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} Partial "job/_list" 1.05 ms (1)
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} Component "language/language" 8.55 ms (1)
+Dec 22 15:25:37 symfony [info] {sfWebDebugLogger} Partial "language/_language" 2.17 ms (1)
+Dec 22 15:25:37 symfony [info] {sfWebResponse} Send content (52990 o)
+Dec 22 15:25:49 symfony [info] {sfPatternRouting} Match route "localized_homepage" (/:sf_culture/) for /en/ with parameters array (  'module' => 'job',  'action' => 'index',  'sf_culture' => 'en',)
+Dec 22 15:25:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Dec 22 15:25:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Dec 22 15:25:49 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Dec 22 15:25:49 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Dec 22 15:25:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.name AS j__name, j.created_at AS j__created_at, j.updated_at AS j__updated_at, j.slug AS j__slug, j2.id AS j2__id, j2.category_id AS j2__category_id, j2.type AS j2__type, j2.company AS j2__company, j2.logo AS j2__logo, j2.url AS j2__url, j2.position AS j2__position, j2.location AS j2__location, j2.description AS j2__description, j2.how_to_apply AS j2__how_to_apply, j2.token AS j2__token, j2.is_public AS j2__is_public, j2.is_activated AS j2__is_activated, j2.email AS j2__email, j2.expires_at AS j2__expires_at, j2.created_at AS j2__created_at, j2.updated_at AS j2__updated_at FROM jobeet_category j LEFT JOIN jobeet_job j2 ON j.id = j2.category_id WHERE (j2.expires_at > ?) - (2021-12-22 15:25:49)
+Dec 22 15:25:49 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/indexSuccess.php"
+Dec 22 15:25:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.category_id = ? AND j.is_activated = ?) LIMIT 2 - (13, 1)
+Dec 22 15:25:49 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/job/templates/_list.php"
+Dec 22 15:25:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT COUNT(*) AS num_results FROM jobeet_job j WHERE j.category_id = ? AND j.is_activated = ? - (13, 1)
+Dec 22 15:25:49 symfony [info] {sfPHPView} Decorate content with "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:49 symfony [info] {sfPHPView} Render "G:\development\jobeet\apps\frontend\templates/layout.php"
+Dec 22 15:25:49 symfony [info] {main} Get slot "title"
+Dec 22 15:25:49 symfony [info] {Doctrine_Connection_Statement} execute : SELECT j.id AS j__id, j.category_id AS j__category_id, j.type AS j__type, j.company AS j__company, j.logo AS j__logo, j.url AS j__url, j.position AS j__position, j.location AS j__location, j.description AS j__description, j.how_to_apply AS j__how_to_apply, j.token AS j__token, j.is_public AS j__is_public, j.is_activated AS j__is_activated, j.email AS j__email, j.expires_at AS j__expires_at, j.created_at AS j__created_at, j.updated_at AS j__updated_at FROM jobeet_job j WHERE (j.id IN (?, ?, ?)) - (103, 89, 35)
+Dec 22 15:25:49 symfony [info] {main} Call "language->executeLanguage()"
+Dec 22 15:25:49 symfony [info] {sfPartialView} Render "G:\development\jobeet\apps\frontend\modules/language/templates/_language.php"
+Dec 22 15:25:49 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Dec 22 15:25:49 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} Configuration 2.64 ms (11)
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} Factories 25.62 ms (1)
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} Action "job/index" 36.84 ms (1)
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} Database (Doctrine) 2.24 ms (5)
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 32.79 ms (1)
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} Partial "job/_list" 1.06 ms (1)
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} Component "language/language" 9.02 ms (1)
+Dec 22 15:25:49 symfony [info] {sfWebDebugLogger} Partial "language/_language" 2.19 ms (1)
+Dec 22 15:25:49 symfony [info] {sfWebResponse} Send content (53008 o)
